@@ -3,3 +3,4 @@ from FetchByJoin import *
 #fetchByJoin()
 capName=fetchCapName("ICICIBANK")
 print(capName)
+#Added by DipansTech
