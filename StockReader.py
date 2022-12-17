@@ -25,3 +25,6 @@ def getSectorAndStockInfo(stockCode):
     records = cur.fetchall()
     print(records)
     return records[0]
+
+#THANKS
+#Welcome
