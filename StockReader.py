@@ -27,3 +27,4 @@ def getSectorAndStockInfo(stockCode):
     return records[0]
 
 #THANKS
+#Welcome
