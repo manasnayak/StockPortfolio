@@ -1,3 +1,4 @@
+from GetCapName import *
 from FetchAll import *
 from menu import menu
 from InsertRecord import *
@@ -13,8 +14,8 @@ while (True):
     try:
         print("-" * 50)
         ch = int(input("Enter your choice:"))
-        if (ch <= 0 or ch > 11):
-            print("Please Enter a number between 1 to 11")
+        if (ch <= 0 or ch > 12):
+            print("Please Enter a number between 1 to 12")
         else:
             print("-" * 50)
             match (ch):
@@ -40,11 +41,13 @@ while (True):
                 case 10:
                     fetchByJoin()
                 case 11:
+                    readall()
+                case 12:
                     con = input("Do you want to EXIT (yes/no):").lower()
                     print("-" * 50)
                     if (con == "yes"):
                         print("Thanks for using this program")
                         sys.exit()
     except ValueError as v:
-        print("Please enter number 1 to 11. Don't Enter strs/symbols/alnums")
+        print("Please enter number 1 to 12. Don't Enter strs/symbols/alnums")
         print(v)

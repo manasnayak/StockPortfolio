@@ -18,7 +18,6 @@ def readall():
 
 
 
-readall()
 
 
 

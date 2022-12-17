@@ -6,7 +6,7 @@ def sectorMasterFetch():
     try:
         con = cx_Oracle.connect(const.DB_CONNECT)
         cur = con.cursor()
-        cur.execute("select id,name,parentid from sectormaster")
+        cur.execute(const.SECTORMASTER)
         records = cur.fetchall()
         dictSector = {}
         for column in records:
@@ -18,7 +18,7 @@ def sectorMasterFetch():
             dictSector.update(sectorDictObj)
 
         stockCode = takeInputFromUser()
-        cur.execute("select stock_name,stock_code,subcategory_id from stockmaster where stock_code=('%s')" % (stockCode))
+        cur.execute(const.FETCH_SECTORMASTER % (stockCode))
         records = cur.fetchall()
 
         stName = records[0][0]  # Stock Name

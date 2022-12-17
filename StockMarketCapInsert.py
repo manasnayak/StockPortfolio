@@ -20,11 +20,11 @@ def readCsvInsert():
                 try:
                     con = cx_Oracle.connect(const.DB_CONNECT)
                     cur = con.cursor()
-                    cur.execute("insert into stockmaster (id,stock_code,stock_name) values (%d,'%s','%s')" % (id,stCode, stName))
+                    cur.execute(const.INSERT_STOCKMASTER % (id,stCode, stName))
 
                     capName= marketCapMaster(marketCap)
 
-                    cur.execute("insert into stockmarketcap values (%d,'%s','%s','%s')" %(id, stCode, marketCap,capName))
+                    cur.execute(const.INSERT_STOCKMARKETCAP %(id, stCode, marketCap,capName))
                     con.commit()
 
                     print()

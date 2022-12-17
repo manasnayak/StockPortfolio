@@ -11,5 +11,6 @@ def menu():
     print("\t8.Insert data from csv file")
     print("\t9.Fetch Stock details based on single/Multiple Stock Code using stocksMaster and sectorMaster")
     print("\t10.Fetch Stock details based on single/Multiple Stock Code using Oracle Join")
-    print("\t11.Exit")
+    print("\t11.Fetch Stock details,Cap name based on single Stock Code using Oracle Join")
+    print("\t12.Exit")
     print("-" * 50)
