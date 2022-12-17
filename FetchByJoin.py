@@ -7,17 +7,17 @@ def fetchByJoin():
 
     stCode=takeInputFromUser()
     record = getSectorAndStockInfo(stCode)
+
     sectorName = record[0]
     subSectorName = record[1]
-    parentId=record[2]
-    id = record[3]
-    stockCode=record[4]
-    stockName=record[5]
+    subSubSectorName=record[2]
+    stockName = record[3]
 
 
-    print("Stock Code:{},Stock Name:{},Subsector Name:{},Sector Name:{}".format(stockCode, stockName, subSectorName,
-                                                                                   sectorName))
-    return stockName,subSectorName,sectorName,stockCode
+
+    print("Stock Code:{},Stock Name:{},Subsector Name:{},Sector Name:{},Subsubsector Name:{}".format(stCode, stockName, subSectorName,
+                                                                                   sectorName,subSubSectorName))
+    return stockName,subSectorName,sectorName,stCode
 
 def takeInputFromUser():
     r = input("Enter Stock Code:").upper()

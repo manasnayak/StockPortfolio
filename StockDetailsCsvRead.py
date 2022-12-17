@@ -14,7 +14,7 @@ def csvRead():
                 try:
                     con = cx_Oracle.connect(const.DB_CONNECT)
                     cur = con.cursor()
-                    cur.execute("insert into stockmaster values ('%s','%s')" % (stCode, stName))
+                    cur.execute(const.CSV_INSERT % (stCode, stName))
                     con.commit()
                     print()
                 except cx_Oracle.DatabaseError as db:
