@@ -5,6 +5,7 @@ def fetchCapName(stCode):
     cur=dbconnect()
     cur.execute(const.STOCKMARKETCAP%stCode)
     record=cur.fetchall()
+    print(record)
     return record[0][0]
 
 def marketCapMaster(marketCapAmount):
